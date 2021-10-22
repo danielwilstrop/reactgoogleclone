@@ -33,11 +33,7 @@ const Results = () => {
                 <p className='text-sm'>
                   {link.length > 30 ? link.substring(0, 30) : link}
                 </p>
-                <p className='text-center'>
-                  {description.split(' ').length > 20
-                    ? description.split(' ').slice(0, 20).join(' ') + '...'
-                    : description}
-                </p>
+                <p className='text-center'>{description}</p>
               </a>
             </div>
           ))}
@@ -73,12 +69,12 @@ const Results = () => {
                 <p className='text-lg dark:text-blue-300 text-blue-700'>
                   {title}
                 </p>
-                <div className='flex gap-4'>
-                  <a href={source?.href} target='_blank' rel='noreferrer'>
-                    {source?.href}
-                  </a>
-                </div>
               </a>
+              <div className='flex gap-4'>
+                <a href={source?.href} target='_blank' rel='noreferrer'>
+                  {source?.href}
+                </a>
+              </div>
             </div>
           ))}
         </div>
